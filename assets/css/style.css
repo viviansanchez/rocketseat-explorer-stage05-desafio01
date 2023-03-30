@@ -60,6 +60,11 @@ button {
 .screen1 img {
   max-height: 12.5rem;
   max-width: 16.5rem;
+  cursor: pointer;
+}
+
+.screen1 img:hover {
+  animation: shake 0.5s infinite;
 }
 
 /* screen2 */
@@ -67,11 +72,6 @@ button {
   margin: 48px 64px;
   max-width: 19.5rem;
   text-align: center;
-
-  /* display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center; */
 }
 
 .screen2 h1 {
@@ -86,6 +86,8 @@ button {
   margin-bottom: 1rem;
   background: #e4edf1;
   box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+  animation: slide-up 2s;
 }
 
 .screen2 img {
@@ -108,4 +110,52 @@ button {
 
 .screen2 button:hover {
   filter: brightness(1.1);
+}
+
+/* keyframes */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(9.375rem) scale(0.2);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }

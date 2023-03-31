@@ -42,7 +42,7 @@ button {
 
 /* scree1 */
 .screen1 {
-  margin: 48px 64px 64px;
+  margin: 3rem 4rem 4rem;
   max-width: 19.5rem;
 }
 
@@ -69,7 +69,7 @@ button {
 
 /* screen2 */
 .screen2 {
-  margin: 48px 64px;
+  margin: 3rem 4rem;
   max-width: 19.5rem;
   text-align: center;
 }
@@ -157,5 +157,24 @@ button {
   to {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin: -7.5rem 0.5rem 0;
+  }
+
+  .screen1,
+  .screen2 {
+    margin: 1rem;
+  }
+
+  .screen1 img {
+    max-width: 10.5rem;
+  }
+
+  .screen2 img {
+    max-width: 13.5rem;
   }
 }

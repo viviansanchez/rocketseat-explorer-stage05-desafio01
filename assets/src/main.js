@@ -18,7 +18,7 @@ const screen2 = document.querySelector('.screen2')
 const fortuneCookie = document.querySelector('.screen1 img')
 const btnOpenAnotherCookie = document.querySelector('.screen2 button')
 const cookiePhrase = document.querySelector('.screen2 p')
-let controlArrayIndex = Math.round(Math.random() * 12)
+let controlArrayIndex = Math.round(Math.random() * (fortuneCookiePhrases.length))
 
 fortuneCookie.addEventListener('click', findTodaysLuck)
 btnOpenAnotherCookie.addEventListener('click', toggleScreen)
@@ -36,9 +36,8 @@ function toggleScreen () {
 function selectRandomCookiePhrase () {
  cookiePhrase.innerHTML = fortuneCookiePhrases[controlArrayIndex]
 
- controlArrayIndex = Math.round(Math.random() * 12)
+ controlArrayIndex = Math.round(Math.random() * (fortuneCookiePhrases.length))
 }
-
 
 
 
